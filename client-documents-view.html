@@ -238,7 +238,10 @@
       }
       @media(max-width: 500px){
         .main-cont {
-          grid-template-columns: repeat(7, 1fr);
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          display: none;
         }
         .sidebar-content {
           margin-left: 5px;
@@ -255,6 +258,7 @@
         }
         .header {
           padding-left: 0;
+          grid-column: 1 / -1;
         }
         .header-nav-item {
           margin: 0 30px;
@@ -262,7 +266,7 @@
         }
         .content {
           margin-left: 10px;
-          grid-column: auto;
+          grid-column: 1 / -1;
         }
         .invoice-cont {
           margin: 30px 20px 10px 0;
@@ -282,6 +286,32 @@
         }
         .billing-clhead { font-size: 10px; }
         .bills-description { font-size: 15px !important;}
+
+        .mobile-sidebar {
+          position: absolute;
+          display: flex;
+          height: auto;
+          top: 85px;
+          left: -60vw;
+          z-index: 1;
+          transition: left ease-in 500ms;
+        }
+        .mobile-sidebar.active {
+          left: 0;
+        }
+        .mobile-nav-btn {
+          width: 40px;
+        }
+        .nav-span {
+          display: block;
+          height: 5px;
+          margin: 4px;
+          border-radius: 10px;
+          background-color: #091429;
+        }
+        .mobile-nav-btn.active {
+          transform: rotate(90deg);
+        }
       }
     </style>
   </head>
@@ -289,11 +319,16 @@
   <body>
     <div class="main-cont">
       <div class="header">
+        <div class="mobile-nav-btn" onclick="bars()" id="nav-btn">
+          <span class="nav-span"></span>
+          <span class="nav-span"></span>
+          <span class="nav-span"></span>
+        </div>
         <a href="#"><h4 class="header-nav-item">Project Info</h4></a>
         <a href="#"><h4 class="header-nav-item">Documents</h4></a>
       </div>
 
-      <div class="sidebar">
+      <div class="sidebar mobile-sidebar" id="sidebar">
         <div class="sidebar-content">
           <img class="logo-img" src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570557507/Lancers_c8dpbb.png" alt="logo">
           <table class="nav-table">
@@ -438,6 +473,12 @@
       function drop() {
         let x = document.getElementById('dd-menu');
         x.classList.toggle('active');
+      }
+      function bars() {
+        let y = document.getElementById('sidebar');
+        let z = document.getElementById('nav-btn');
+        y.classList.toggle('active');
+        z.classList.toggle('active');
       }
     </script>
 
