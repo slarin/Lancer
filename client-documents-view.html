@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -30,8 +31,9 @@
         grid-column: 1 / 2;
         grid-row: 1 / -1;
         background-color: #091429;
-        color: #ffffff;
-        height: 100%; 
+        height: 100%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        height: 65%;
       }
       .sidebar-content {
         margin: 30px 0 0 40px;
@@ -51,7 +53,11 @@
         margin-right: 10px;
       }
       .nav-txt {
-        font-size: 0.9rem;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 25px;
+        color: #eeeeee;
       }
       .caret-dwn {
         display: flex;
@@ -106,10 +112,10 @@
         padding: 30px 0;
         cursor: pointer;
       }
+      .header-nav-item-left {border-bottom: 4px solid #009fff;}
       .header-nav-item:hover, .header-nav-item:active {
         border: none;
         border-bottom: 4px solid #009fff;
-        border-radius: 3px;
       }
 
       /*content*/
@@ -123,7 +129,7 @@
         justify-content: space-between;
       }
       .lanclient-buttons>.left>button { 
-        border: 2px solid #000000; border-radius: 5px; padding: 10px; margin-right: 1.5em; background: #fff; font-family: 'Ubuntu', 'san-serif'; font-size: 13px; font-weight: 600; user-select: none;
+        border: 2px solid #546067; border-radius: 5px; padding: 10px; margin-right: 1.5em; background: #fff; font-size: 16px; font-weight: bold; color: #546067;
       }
       .lanclient-buttons>.left>button:hover {
         background-color: #000000;
@@ -131,7 +137,7 @@
         cursor: pointer;
       }
       .lanclient-buttons>.right>button { 
-      background-color: #009fff; border: thin; color: #fff; font-family: 'Ubuntu', 'san-serif'; padding: 10px; border-radius: 5px; font-size: 13px; font-weight: 600; margin-right: 2em; width: 170px; border: 2px solid #009fff;
+      background-color: #009fff; border: thin; color: #fff; font-family: 'Ubuntu', 'san-serif'; padding: 10px; border-radius: 5px; font-size: 13px; font-weight: bold; margin-right: 2em; width: 170px; border: 2px solid #009fff;
       }
       .lanclient-buttons>.right>button:hover {
         background-color: #0ABAB5;
@@ -141,7 +147,7 @@
       .invoice-cont {
         border: 1px solid #ffffff;
         border-radius: 3px;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.03);
         margin: 35px 27px 20px 0;
         padding: 20px;
       }
@@ -196,9 +202,12 @@
       .invoice-cont td { 
         text-align: center; 
         padding: 15px; 
-        font-weight: normal; 
+        font-weight: 500;
+        font-style: normal;
+        opacity: 0.8; 
         font-size: 15px; 
         border-bottom: 1px solid #a6a6a6;
+        font-family: 'Ubuntu', sans-serif;
       }
 
       tfoot>tr { text-align: right;
@@ -233,7 +242,7 @@
       }
       @media(max-width: 800px){
         .sidebar-content {
-          margin-left: 15px;
+          margin-left: 10px;
         }
       }
       @media(max-width: 500px){
@@ -324,7 +333,7 @@
           <span class="nav-span"></span>
           <span class="nav-span"></span>
         </div>
-        <a href="#"><h4 class="header-nav-item">Project Info</h4></a>
+        <a href="#"><h4 class="header-nav-item header-nav-item-left">Project Info</h4></a>
         <a href="#"><h4 class="header-nav-item">Documents</h4></a>
       </div>
 
@@ -353,7 +362,7 @@
               <td><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approve-invoice_efuypp.png" alt="invoice" class="icon"></td><td class="nav-txt"><a href="#">Invoice</a></td>
             </tr>
             <tr>
-              <td><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approval_xfiucq.png" alt="contract" class="icon"></td><td class="nav-txt"><a href="#">Contract</a></td>
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714691/contact-support/policy_qtves1.svg" alt="contract" class="icon"></td><td class="nav-txt"><a href="#">Contract</a></td>
             </tr>
             <tr>
               <td><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approval_xfiucq.png" alt="proposals" class="icon"></td><td class="nav-txt"><a href="#">Proposals</a></td>
